@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Calculator</title>
+    <link rel="stylesheet" href="task3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <!-- Display Section -->
+            <div class="display-section">
+                <div class="previous-operation" id="previous-operation"></div>
+                <div class="current-operation" id="current-operation">0</div>
+            </div>
+            
+            <!-- Controls Section -->
+            <div class="controls-section">
+                <!-- First Row -->
+                <button class="btn control-btn function-btn" data-action="clear">
+                    <i class="fas fa-broom"></i>
+                </button>
+                <button class="btn control-btn function-btn" data-action="backspace">
+                    <i class="fas fa-backspace"></i>
+                </button>
+                <button class="btn control-btn function-btn" data-action="percentage">%</button>
+                <button class="btn control-btn operator-btn" data-operator="÷">÷</button>
+                
+                <!-- Second Row -->
+                <button class="btn number-btn" data-number="7">7</button>
+                <button class="btn number-btn" data-number="8">8</button>
+                <button class="btn number-btn" data-number="9">9</button>
+                <button class="btn control-btn operator-btn" data-operator="×">×</button>
+                
+                <!-- Third Row -->
+                <button class="btn number-btn" data-number="4">4</button>
+                <button class="btn number-btn" data-number="5">5</button>
+                <button class="btn number-btn" data-number="6">6</button>
+                <button class="btn control-btn operator-btn" data-operator="-">−</button>
+                
+                <!-- Fourth Row -->
+                <button class="btn number-btn" data-number="1">1</button>
+                <button class="btn number-btn" data-number="2">2</button>
+                <button class="btn number-btn" data-number="3">3</button>
+                <button class="btn control-btn operator-btn" data-operator="+">+</button>
+                
+                <!-- Fifth Row -->
+                <button class="btn number-btn zero-btn" data-number="0">0</button>
+                <button class="btn number-btn" data-number=".">.</button>
+                <button class="btn control-btn equals-btn" data-action="calculate">=</button>
+            </div>
+            
+            <!-- History Toggle -->
+            <div class="history-toggle">
+                <button id="history-toggle">
+                    <i class="fas fa-history"></i>
+                </button>
+            </div>
+            
+            <!-- History Panel -->
+            <div class="history-panel" id="history-panel">
+                <div class="history-header">
+                    <h3>Calculation History</h3>
+                    <button id="clear-history">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+                <div class="history-list" id="history-list">
+                    <!-- History items will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Theme Toggle -->
+        <div class="theme-toggle">
+            <button id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="task3.js"></script>
+</body>
+</html>
